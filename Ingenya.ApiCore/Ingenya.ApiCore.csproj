@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA4B1807-E78D-4F18-8F77-72FC6DB5F229}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingenya.ApiCore</RootNamespace>
+    <AssemblyName>Ingenya.ApiCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\Referencias\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ingenya.Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Referencias\Ingenya.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseManagement.cs" />
+    <Compile Include="BitacoraManagement.cs" />
+    <Compile Include="CartaPsicometricaManagement.cs" />
+    <Compile Include="CategoriaParametroManagement.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="ClienteManagement.cs" />
+    <Compile Include="ConcentracionParticulaManagement.cs" />
+    <Compile Include="FactoresDeHumedadManagement.cs" />
+    <Compile Include="FugaManagement.cs" />
+    <Compile Include="GraficoNivelActividadManagement.cs" />
+    <Compile Include="GraNivActCalorLatenteManagement.cs" />
+    <Compile Include="ImagenesCalculoManagement.cs" />
+    <Compile Include="NombreParametroManagement.cs" />
+    <Compile Include="OcupacionManagement.cs" />
+    <Compile Include="ParametroManagement.cs" />
+    <Compile Include="PreparaMezclaManagement.cs" />
+    <Compile Include="ProcesoCartaPsicometricaManagement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvedorManagement.cs" />
+    <Compile Include="ProyectoManagement.cs" />
+    <Compile Include="ProyectoParametroManagement.cs" />
+    <Compile Include="ProyectoRoomManagement.cs" />
+    <Compile Include="ReporteManagement.cs" />
+    <Compile Include="RoomManagement.cs" />
+    <Compile Include="SubCategoriaParametroManagement.cs" />
+    <Compile Include="Utilities\Formulas.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Grafico\Grafico.csproj">
+      <Project>{1437ac7b-d1e6-4b73-8403-1233f856454d}</Project>
+      <Name>Grafico</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ingenya.DataAccess\Ingenya.DataAccess.csproj">
+      <Project>{1333E441-71EE-4324-905A-FCB6D8A157A0}</Project>
+      <Name>Ingenya.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

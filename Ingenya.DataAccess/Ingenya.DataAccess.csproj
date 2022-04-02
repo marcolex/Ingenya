@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1333E441-71EE-4324-905A-FCB6D8A157A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ingenya.DataAccess</RootNamespace>
+    <AssemblyName>Ingenya.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\Referencias\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Referencias\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Crud\BitacoraCrud.cs" />
+    <Compile Include="Crud\CartaPsicometricaCrud.cs" />
+    <Compile Include="Crud\CategoriaParametroCrud.cs" />
+    <Compile Include="Crud\ClienteCrud.cs" />
+    <Compile Include="Crud\ConcentracionParticulaCrud.cs" />
+    <Compile Include="Crud\CrudFactory.cs" />
+    <Compile Include="Crud\FactoresDeHumedadCrud.cs" />
+    <Compile Include="Crud\FugaCrud.cs" />
+    <Compile Include="Crud\GraficoNivelActividadCrud.cs" />
+    <Compile Include="Crud\GraNivActCalorLatenteCrud.cs" />
+    <Compile Include="Crud\ImagenesCalculoCrud.cs" />
+    <Compile Include="Crud\NombreParametroCrud.cs" />
+    <Compile Include="Crud\OcupacionCrud.cs" />
+    <Compile Include="Crud\ParametroCrud.cs" />
+    <Compile Include="Crud\PreparaMezclaCrud.cs" />
+    <Compile Include="Crud\ProcesoCartaPsicometricaCrud.cs" />
+    <Compile Include="Crud\ProvedorCrud.cs" />
+    <Compile Include="Crud\ProyectoCrud.cs" />
+    <Compile Include="Crud\ProyectoParametroCrud.cs" />
+    <Compile Include="Crud\ProyectoRoomCrud.cs" />
+    <Compile Include="Crud\ReporteCrud.cs" />
+    <Compile Include="Crud\RoomCrud.cs" />
+    <Compile Include="Crud\SubCategoriaParametroCrud.cs" />
+    <Compile Include="Dao\SqlDao.cs" />
+    <Compile Include="Dao\SqlOperation.cs" />
+    <Compile Include="Mapper\BitacoraMapper.cs" />
+    <Compile Include="Mapper\CartaPsicometricaMapper.cs" />
+    <Compile Include="Mapper\CategoriaParametroMapper.cs" />
+    <Compile Include="Mapper\ClienteMapper.cs" />
+    <Compile Include="Mapper\ConcentracionParticulaMapper.cs" />
+    <Compile Include="Mapper\EntityMapper.cs" />
+    <Compile Include="Mapper\FactoresDeHumedadMapper.cs" />
+    <Compile Include="Mapper\FugaMapper.cs" />
+    <Compile Include="Mapper\GraficoNivelActividadMapper.cs" />
+    <Compile Include="Mapper\GraNivActCalorLatenteMapper.cs" />
+    <Compile Include="Mapper\ImagenesCalculoMapper.cs" />
+    <Compile Include="Mapper\IObjectMapper.cs" />
+    <Compile Include="Mapper\ISqlStaments.cs" />
+    <Compile Include="Mapper\NombreParametroMapper.cs" />
+    <Compile Include="Mapper\OcupacionMapper.cs" />
+    <Compile Include="Mapper\ParametroMapper.cs" />
+    <Compile Include="Mapper\PreparaMezclaMapper.cs" />
+    <Compile Include="Mapper\ProcesoCartaPsicometricaMapper.cs" />
+    <Compile Include="Mapper\ProvedorMapper.cs" />
+    <Compile Include="Mapper\ProyectoMapper.cs" />
+    <Compile Include="Mapper\ProyectoParametroMapper.cs" />
+    <Compile Include="Mapper\ProyectoRoomMapper.cs" />
+    <Compile Include="Mapper\ReporteMapper.cs" />
+    <Compile Include="Mapper\RoomMapper.cs" />
+    <Compile Include="Mapper\SubCategoriaParametroMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ingenya.Entities\Ingenya.Entities.csproj">
+      <Project>{0BDC269B-9AD4-4D67-BEF4-4BE36A18A0AD}</Project>
+      <Name>Ingenya.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
